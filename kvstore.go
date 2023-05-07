@@ -3,7 +3,9 @@ package kvstore
 import (
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/cosmos/cosmos-sdk/types/errors"
+	"github.com/tendermint/tendermint/abci/types"
 )
 
 // Define the module name
