@@ -40,9 +40,8 @@ func (msg MsgCreateKeyValuePair) ValidateBasic() error {
 	}
 	return nil
 }
-
 func (msg MsgCreateKeyValuePair) GetSignBytes() []byte {
-	return sdk.MustSortJSON(ModuleCdc.MustMarshalJSON(&msg))
+	return sdk.MustSortJSON(msg.cdc.MustMarshalJSON(&msg))
 }
 
 func (msg MsgCreateKeyValuePair) GetSigners() []sdk.AccAddress {
